@@ -10,7 +10,6 @@ body {
   -o-background-size: cover;
   background-size: cover; */
   height: 470px;
-//  padding-bottom: 20px;
 }
 
 .nav-bar { /* Unordered list at top of page */
@@ -55,7 +54,7 @@ h1 { /* My name */
 	color: white;
 	font-size: 48px;
 	font-weight: bold;
-	margin-top: 16px;
+	margin-top: 16px; /* Added to adjust layout for Firefox */
 	margin-bottom: 6px;
 	letter-spacing: -1px;
 }
@@ -69,6 +68,7 @@ h2 { /* Job title */
 .bio { /* Bio notes */
 	color: white;
 	font-size: 14px;
+	margin-bottom: 20px;
 }
 
 h2 a { /* Github & LinkedIn links */
