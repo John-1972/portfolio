@@ -1,258 +1,182 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
-
-		<link
-			rel="stylesheet"
-			href="prism-atom-dark.css"
-			type="text/css"
-			media="screen"
-		/>
-
-		<script type="text/javascript" src="prism.js"></script>
-		<script type="text/javascript" src="prism.ruby.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i" rel="stylesheet">
 
 		<title>John Henderson</title>
 		<meta name="description" content="John Henderson has trained to become
-		a junior full-stack web developer using JavaScript, Ruby and Rails." />
+		a junior full-stack web developer using HTML, CSS, Ruby and Rails." />
 	</head>
 
 	<body>
-		<div class="about-container">
+		<div class="top-section">
+
 			<ul class="nav-bar">
 				<li><a href="#" class="nav-link">ABOUT</a></li>
-				<li><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
-				<li><a href="#web-apps" class="nav-link">WEB APPS</a></li>
+				<li><a href="#work-proj" class="nav-link">WORK & PROJECTS</a></li>
 				<li><a href="#skills-and-tools" class="nav-link">SKILLS &amp; TOOLS</a></li>
-				<li class="hire-me"><a href="#hire-me" class="nav-link">HIRE ME</a></li>
+				<li class="contact-box"><a href="#contact" class="nav-link">CONTACT</a></li>
 			</ul>
 
-			<div class="about">
+			<div class="about-container">
+
+				<div class="text-container">
+					<h1>John Henderson</h1>
+					<h2>Junior Full-Stack Web Developer</h2>
+					<p class="bio">
+						Having previously programmed in Turbo Pascal, John Henderson started developing HTML websites in the late 1990s. Like many web designers of the time, he moved onto other things when the dotcom bubble burst. But in 2015, his interest in web development was re-kindled, and he created a basic PHP web app which extracted its data from comma-separated-variable files. In 2018, he decided to make the leap back into the industry. He left his job in solar panel sales, completed the Firehose Project&rsquo;s Full-Stack Web Dev course and now seeks a coding position.
+					</p>
+					<h2><a href= "https://github.com/John-1972" target="_blank">Github Account</a><a href="https://www.linkedin.com/in/john-henderson-a5149a168/" target="_blank">LinkedIn Page</a></h2>			
+				</div> <!-- text-container -->
+
 				<img src="me.jpg" class="me" />
 
-				<h1>John Henderson</h1>
-				<h2>Looking for interesting projects...</h2>
-				<hr class="grey"/>
-				<p class="bio">
-					John Henderson would like to become a web developer. In 1984, he started programming in BASIC on 8-bit home computers. By 1991, he had discovered IBM PCs and Turbo Pascal. In 2015, he created a website which extracted its data from comma-separated-variable files using PHP. In 2018, he left his job in solar panel sales, completed the Firehose Project&rsquo;s Full-Stack Web Dev course and now seeks a coding position.
-				</p>
+			</div> <!-- about-container -->
+
+		</div> <!-- top-section -->
+
+		<h3 id="work-proj">&lsquo;After-Bootcamp&rsquo;<br />(October 2018 - Present)</h3>
+
+		<div class="project-box">
+			<div class="project-image">
+				<a href=https://after-bootcamp-website.herokuapp.com/ target="_blank"><img src="after-bootcamp-sml.png" class="full-width" /></a>
 			</div>
-		</div>
-
-		<h3 id="code-samples">Code Snippets</h3>
-		<hr class="turquoise">
-
-		<div class="box">
-			<h4>Temperature Conversion</h4>
+			<h4>After-Bootcamp</h4>
 			<p>
-				This ruby program will prompt the user for a temperature
-				in degrees Celsius and let the user know what the
-				corresponding temperature is in Fahrenheit.
+				A database-powered directory of web resources to assist bootcamp graduates with their job hunt.
 			</p>
+			<p>The site also includes MVC project exercises that allow graduates to apply their newly-learned skills.</p>
+			<p>HTML, CSS, Bootstrap, Rails, Github, Heroku</p>
+			<p><a href=https://after-bootcamp-website.herokuapp.com/ target="_blank">Demo</a><a href="https://github.com/John-1972/after-bootcamp" target="_blank">Github</a></p>
 		</div>
 
-		<div class="box">
-			<pre>
-				<code class="language-ruby">
-					def c_to_f(temp)
-					return (temp * 1.8) + 32
-					end
-
-					print &quot;Enter temperature in degrees Celsius: &quot;
-					celsius = gets.to_f
-					fahrenheit = c_to_f(celsius)
-					puts &quot;#{celsius} degrees C is equal to #{fahrenheit} degrees F&quot;
-				</code>
-			</pre>
+		<div class="project-box">
+			<div class="project-image">
+				<a href=https://planets-after-bootcamp.herokuapp.com// target="_blank"><img src="planets-sml.png" class="full-width" /></a>
+			</div>
+			<h4>Planets of the Solar System</h4>
+			<p>
+				This is the first MVC project exercise on the After-Bootcamp site that novice programmers can try their hand at.
+			</p>
+			<p>This app is a relatively simple slideshow of the 8 planets that orbit the Sun.</p>
+			<p>HTML, CSS, Bootstrap, Rails, Github, Heroku</p>
+			<p><a href=https://planets-after-bootcamp.herokuapp.com/ target="_blank">Demo</a><a href="https://github.com/John-1972/planets" target="_blank">Github</a></p>
 		</div>
 
-		<br class="clear" />
-
-		<div class="box">
-			<pre>
-				<code class="language-ruby">
-					# Ordinal challenge, turning &quot;18&quot; into &quot;18th&quot; or &quot;21&quot; into &quot;21st&quot;
-
-					def units_column_of(integer)
-						return integer % 10
-					end
-
-					def tens_column_of(integer)
-					# turn integer into a float &amp; div by 10 to shift tens col to units col
-						float = integer.to_f / 10
-					#	turn float back into an integer &amp; modulo 10 to return units col
-						return float.to_i % 10
-					end
-
-					def correct_suffix(integer)
-						if units_column_of(integer) == 1 &amp;&amp; tens_column_of(integer) != 1
-							return &quot;st&quot;
-						elsif units_column_of(integer) == 2 &amp;&amp; tens_column_of(integer) != 1
-							return &quot;nd&quot;
-						elsif units_column_of(integer) == 3 &amp;&amp; tens_column_of(integer) != 1
-							return &quot;rd&quot;
-						else
-							return &quot;th&quot;
-						end
-					end
-
-					print &quot;Enter a number: &quot;
-					number = gets.to_i
-					puts &quot;The ordinal of your number is #{number}&quot; + correct_suffix(number)
-				</code>
-			</pre>
+		<div class="project-box">
+			<div class="project-image">
+				<a href=https://prefab-after-bootcamp.herokuapp.com// target="_blank"><img src="prefab-sml.png" class="full-width" /></a>
+			</div>
+			<h4>Prefab Home Manufacturers</h4>
+			<p>
+				This is the second MVC project exercise on the After-Bootcamp site for bootcamp graduates to try to build.
+			</p>
+			<p>It's a directory-style page of bookmarks and implements user authentication and forms to add bookmarks.</p>
+			<p>HTML, CSS, Bootstrap, Rails, Github, Heroku</p>
+			<p><a href=https://prefab-after-bootcamp.herokuapp.com/ target="_blank">Demo</a><a href="https://github.com/John-1972/prefab" target="_blank">Github</a></p>
 		</div>
 
-		<div class="box">
-		  	<h4>Ordinal Challenge</h4>
-		  	<p>
-		  		This ruby program will convert a plain number
-		  		to the ordinal of the number. So for example,
-		  		if the user enters 2, it will display 2nd, if
-		  		the user enters 3, it will display 3rd, etc.
-	  		</p>
-		</div>
+		<h3>Firehose Project&rsquo;s Fullstack Web Dev Course<br />(February 2018 - July 2018)</h3>
 
-		<br class="clear" />
-
-		<div class="box">
-		  	<h4>Foobar</h4>
-		  	<p>
-		  		This ruby program is an adaptation of a classic technical
-		  		interview problem which displays sequences
-		  		of the Foobar pattern.
-	  		</p>
-		</div>
-
-		<div class="box">
-			<pre>
-				<code class="language-ruby">
-					def run_foobar(total_number)
-						loop_number = 1
-						while loop_number &lt;= total_number do
-							if loop_number % 3 == 0 &amp;&amp; loop_number % 5 == 0
-								puts &quot;Foobar&quot;
-							elsif loop_number % 3 == 0
-								puts &quot;Foo&quot;
-							elsif loop_number % 5 == 0
-								puts &quot;Bar&quot;
-							else
-								puts loop_number.to_s
-							end
-							loop_number = loop_number + 1
-						end
-					end
-
-					print &quot;How many items do you want to see? &quot;
-					items = gets.to_i
-					run_foobar(items)
-				</code>
-			</pre>
-		</div>
-
-		<br class="clear" />
-
-		<h3 id="web-apps">Web Apps</h3>
-		<hr class="turquoise" />
-
-		<div class="box">
-			<h4><a href=https://splurty-john-henderson.herokuapp.com>Quote Generator</a></h4>
-			<a href=https://splurty-john-henderson.herokuapp.com><img src="splurty.png" class="full-width" /></a>
+		<div class="project-box">
+			<div class="project-image">
+				<a href=https://splurty-john-henderson.herokuapp.com target="_blank"><img src="splurty.png" class="full-width" /></a>
+			</div>
+			<h4>Quote Generator</h4>
 			<p>
 				A database-powered quote generator with a mobile-first
 				design, using the Ruby on Rails framework, HTML, and CSS.
 				Uses Git and GitHub for version control, and launched
 				on Heroku.
 			</p>
+			<p>HTML, CSS, Rails, Github, Heroku</p>
+			<p><a href=https://splurty-john-henderson.herokuapp.com/ target="_blank">Demo</a><a href="https://github.com/John-1972/splurty" target="_blank">Github</a></p>
 		</div>
 
-		<div class="box">
-			<h4><a href=https://nomster-john-henderson.herokuapp.com>Yelp Clone</a></h4>
-			<a href=https://nomster-john-henderson.herokuapp.com><img src="nomster.png" class="full-width" /></a>
+		<div class="project-box">
+			<div class="project-image">
+				<a href=https://nomster-john-henderson.herokuapp.com target="_blank"><img src="nomster-sml.png" class="full-width" /></a>
+			</div>
+			<h4>Yelp Clone</h4>
 			<p>
 				A Yelp clone that integrates with the Google Maps API
 				and includes features like user comments, star ratings,
 				image uploading, and user authentication.
 			</p>
-	    </div>
+			<p>HTML, CSS, Bootstrap, Rails, Google Maps, Amazon S3, Github, Heroku</p>
+			<p><a href=https://nomster-john-henderson.herokuapp.com/ target="_blank">Demo</a><a href="https://github.com/John-1972/nomster" target="_blank">Github</a></p>
+	  </div>
 
-	    <br class="clear" />
-
-	    <div class="box">
-			<h4><a href=https://flixter-john-henderson.herokuapp.com>Two-Sided Market Place</a></h4>
-			<a href=https://flixter-john-henderson.herokuapp.com><img src="flixter.png" class="full-width" /></a>
+	  <div class="project-box">
+	  	<div class="project-image">
+	  		<a href=https://flixter-john-henderson.herokuapp.com target="_blank"><img src="flixter-sml.png" class="full-width" /></a>
+	  	</div>
+			<h4>Two-Sided Market Place</h4>
 			<p>
 				A two-sided, video-streaming marketplace platform that
 				features credit card payment capabilities, user role
 				management, complex user interfaces, and advanced
 				database relationships.
 			</p>
-	    </div>
+			<p>HTML, CSS, Bootstrap, Rails, Amazon S3, Stripe Payment Processing, Github, Heroku</p>
+			<p><a href=https://flixter-john-henderson.herokuapp.com/ target="_blank">Demo</a><a href="https://github.com/John-1972/flixter" target="_blank">Github</a></p>
+	  </div>
 
-	    <div class="box">
-			<h4><a href=http://grammable-john-henderson.herokuapp.com>Test Driven Development</a></h4>
-			<a href=http://grammable-john-henderson.herokuapp.com><img src="grammable.png" class="full-width" /></a>
+	  <div class="project-box">
+	  	<div class="project-image">
+				<a href=http://grammable-john-henderson.herokuapp.com target="_blank"><img src="grammable.png" class="full-width" /></a>
+			</div>
+			<h4>Test Driven Development</h4>
 			<p>
 				An Instagram clone that was built using industry-standard, test-driven
 				development following numerous red/green/refactor cycles.
 			</p>
-	    </div>
+			<p>HTML, CSS, Bootstrap, Rails, RSpec, Amazon S3, Github, Heroku</p>
+			<p><a href=http://grammable-john-henderson.herokuapp.com/ target="_blank">Demo</a><a href="https://github.com/John-1972/grammable" target="_blank">Github</a></p>
+	  </div>
 
-	    <br class="clear" />
-
-	    <div class="box">
-			<h4><a href=http://todo-john-henderson.herokuapp.com>Single Page Todo Application</a></h4>
-			<a href=http://todo-john-henderson.herokuapp.com><img src="todoster.png" class="full-width" /></a>
+	  <div class="project-box">
+	  	<div class="project-image">
+				<a href=http://todo-john-henderson.herokuapp.com target="_blank"><img src="todolist.png" class="full-width" /></a>
+			</div>
+			<h4>Project: Single Page Todo App</h4>
 			<p>
-				This single-page to-do application features a
-				fluid user interface that– by using JavaScript–
-				allows users to rapidly add dynamic content.
+				The final student exercise was a single-page to-do app,
+				featuring a	fluid UI that - by using JavaScript -
+				allowed users to rapidly add dynamic content.
+			
+				This became the basis of my student-mentor project, adding
+				individual user authentication, multiple to-do lists & the
+				ability for list items to be re-ordered.
 			</p>
-	    </div>
+			<p>HTML, CSS, Javascript, Rails, Github, Heroku</p>
+			<p><a href=http://todo-john-henderson.herokuapp.com/ target="_blank">Demo</a><a href="https://github.com/John-1972/todo" target="_blank">Github</a></p>
+	  </div>
 
-	    <div class="box">
-			<h4><a href=http://todo-john-henderson.herokuapp.com>Project: Single Page Todo Application</a></h4>
-			<a href=http://todo-john-henderson.herokuapp.com><img src="todoster.png" class="full-width" /></a>
-			<p>
-				The single-page to-do app became the basis
-				of my student-mentor project, adding individual
-				user authentication and multiple to-do lists, and
-				using JavaScript to allow list items to be re-ordered.
-			</p>
-	    </div>
-	    
-	    <br class="clear" />
+	  <br class="clear" />
 
-	    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
-	    <hr class="turquoise" />
-	    <p class="skills-and-tools">
-	    	John has developed proficiency
-	    	in the following programming languages and
-	    	comfort with the following tools.
-	  	</p>
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <p class="skills-and-tools">
+    	John has developed proficiency in the following programming languages and	comfort with the following tools;
+  	</p>
 
-	  	<div class="icons">
-	    	<img src="github.png" class="icon" />
-	    	<!-- <img src="rubocop.png" class="icon" /> -->
-	    	<!-- <img src="trello.png" class="icon" /> -->
-	    	<img src="slack.png" class="icon" />
-	    	<!-- <img src="codeship.png" class="icon" /> -->
+  	<div class="icons">
+    	<img src="skills.png" class="icon" />
+    	<br class="clear" />
 
-	    	<br class="clear" />
-	    	<img src="skills.png" class="icon" />
-	  	</div>
+    	<img src="github.png" class="icon" />
+    	<img src="slack.png" class="icon" />
+  	</div>
 
-	  	<div class="contact-me" id="hire-me">
-	  		<h3 class="contact-headline">Contact</h3>
-	  		<hr class="turquoise" />
-	  		<p class="contact-info">
-	  			Currently entertaining new opportunities.
-	  			Please get in touch via e-mail:
+	  <div class="contact-footer" id="contact">
+	  	<h3 class="contact-headline">Contact</h3>
+	  	<p class="contact-info">
+	  		Currently entertaining new opportunities.
+	  		Please get in touch via e-mail:
 				<br />
 				<br />
 				johnhenderson (squiggle) fastmail.fm
 			</p>
-		</div>
+		</div> <!-- contact-me -->
 	</body>
 </html>

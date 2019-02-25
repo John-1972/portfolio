@@ -1,42 +1,22 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
-  margin: 0;
+  font-family: 'Libre Franklin', sans-serif;
+  /* margin: 0; */
 }
 
-h1 {
-	color: white;
-	font-size: 50px;
-	font-weight: normal;
-	margin-bottom: 0;
+.top-section { /* White-on-dark section at top of page */
+  background: url('dark-honeycomb.png') repeat center center fixed;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  height: 470px;
 }
 
-h2 {
-	color: white;
-	font-size: 18px;
+.nav-bar { /* Unordered list at top of page */
 	margin-top: 0;
 }
 
-h3 {
-	text-align: center;
-	font-size: 28px;
-	font-weight: normal;
-	margin-top: 100px;
-}
-
-h4 {
-	text-align: center;
-	font-size: 24px;
-}
-
-h4 a {
-	text-decoration: none;
-}
-
-p {
-	text-align: center;
-}
-
-li {
+li { /* Horizontal list of links in nav-bar */
 	display: inline-block;
 	font-size: 12px;
 	width: 100px;
@@ -47,114 +27,153 @@ li {
 	text-align: center;
 }
 
-.about-container {
-  background: url('bg.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 600px;
-}
-
-.nav-bar {
-	margin-top: 0;
-}
-
-.nav-link {
+.nav-link { /* Text style for nav links */
 	color: white;
 	text-decoration: none;
 }
 
-.hire-me {
+.contact-box { /* Box around the 'contact' link */
 	border-style: solid;
 	border-color: white;
 	border-width: 1px;
 }
 
-.bio {
+.about-container { /* Container for text and photo in top-section */
+	width: 660px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.text-container { /* Container for text in about-container */
+	width: 400px;
+	float: left;
+	text-align: center;
+}
+
+h1 { /* My name */
+	color: white;
+	font-size: 48px;
+	font-weight: bold;
+	margin-bottom: 6px;
+	letter-spacing: -1px;
+}
+
+h2 { /* Job title */
+	color: white;
+	font-size: 18px;
+	margin-top: 0;
+}
+
+.bio { /* Bio notes */
 	color: white;
 	font-size: 14px;
 }
 
+h2 a { /* Github & LinkedIn links */
+	color: white;
+	margin-left: 15px;
+	margin-right: 15px;
+}
 
-.me {
-	height: 150px;
-	border-radius: 100%;
+.me { /* Photo of me in top-section */
+	height: 200px;
 	border-style: solid;
 	border-color: white;
-	margin-top: 40px;	
+	margin-top: 60px;
+	float: right;
 }
 
-
-.about {
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
+h3 { /* Section headings */
+	color: black;
 	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 40px;
+	margin-bottom: 30px;
 }
 
-
-.grey {
-	height: 3px;
-	background-color: #919191;
-	border: none;
-	width: 50px;
-}
-
-.turquoise {
-  border-top: 5px double #006E86;
-  width: 250px;
-  border-bottom: none;
-  border-right: none;
-  border-left: none;
-}
-
-.box {
+.box { /* Old container for each project's name, image and description */
 	float: left;
 	width: 42.5%;
 	margin-left: 5%;
-	margin-top: 80px;
+	margin-top: 40px;
 }
 
-.clear {
-	clear: both;
+.project-box { /* New project box with image and text side-by-side */
+	margin-top: 25px;
+	width: 800px;
+	height: 275px;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	border-width: 10px;
+	border-color: #EEEEEE;
+	background-color: #EEEEEE;
+}
+
+.project-image { /* Box within project-box for the image */
+	float: left; /* Image on the left, text on the right */
+	width: 400px; /* Specifies the amount of the project-box that project-image should occupy */
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	margin-right: 15px;
 }
 
 .full-width {
-	width: 100%;
+	width: 100%; /* The amount of the project-image box that the image should occupy */
 }
 
-.skills-and-tools {
-	max-width: 400px;
-	margin: 40px auto;
+.project-text { /* Not using this yet. Need to work out responsive design. */
+	float: left;
+	width: 400px;
 }
 
-.icons {
+h4 { /* Project name text style */
+	text-align: center;
+	font-size: 24px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+p { /* Project descriptions */
 	text-align: center;
 }
 
-.icon {
-	margin: 30px 0;
-}
-
-.contact-me {
-	height: 350px;
-	background-color: #202020;
-	padding-top: 30px;
-}
-
-.contact-headline {
-	color: white;
-}
-
-.contact-info {
-	color: white;
-	font-size: 13px;
-	margin-top: 30px;
-}
-
-.contact-link {
-	color: white;
+p a { /* Demo & Github links */
 	font-weight: bold;
-	font-size: 13px;
+	color: black;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.clear { /* Line break to reset floats after '.box' container */
+	clear: both;
+}
+
+.skills-and-tools { /* Container for 'p' text in 'Skills & Tools' section */
+	max-width: 400px;
+	margin: 15px auto 15px;
+}
+
+.icons { /* Container for lang/tool icons */
+	text-align: center;
+}
+
+.icon { /* Applies to each icon image file */
+	margin: 3px 0px 30px;
+}
+
+.contact-footer { /* Container for white-on-dark section at foot of page */
+	height: 230px;
+	background-color: #202020;
+	padding-top: 1px;
+}
+
+.contact-headline { /* Section heading for contact section */
+	color: white;
+}
+
+.contact-info { /* Style for 'p' text in contact section */
+	color: white;
 }
