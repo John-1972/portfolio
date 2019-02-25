@@ -9,7 +9,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; */
-  height: 480px;
+  height: 470px;
+//  padding-bottom: 20px;
 }
 
 .nav-bar { /* Unordered list at top of page */
@@ -54,6 +55,7 @@ h1 { /* My name */
 	color: white;
 	font-size: 48px;
 	font-weight: bold;
+	margin-top: 16px;
 	margin-bottom: 6px;
 	letter-spacing: -1px;
 }
